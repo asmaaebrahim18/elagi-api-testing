@@ -138,6 +138,6 @@ Full list (35 findings): [docs/bug-report.md](docs/bug-report.md)
 
 **Asmaa Ebrahim** — QA Engineer
 
-[GitHub](https://github.com/asmaaebrahim18)
+[LinkedIn](https://www.linkedin.com/in/asmaaebrahim98/) · [GitHub](https://github.com/asmaaebrahim18)
 
 Instructor: Galal Torkey — Semi Corner
