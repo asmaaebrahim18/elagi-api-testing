@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Generated test reports (CI uploads them as artifacts)
+reports/*
+!reports/.gitkeep
+!reports/screenshots/
+
+# Postman exports with real values - never commit these
+*.postman_globals.json
+*-local.postman_environment.json
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

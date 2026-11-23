@@ -1,0 +1,17 @@
+{
+  "name": "elagi-api-testing",
+  "version": "1.0.0",
+  "description": "API test automation for the Elagi (علاجي) online pharmacy — Postman + Newman",
+  "private": true,
+  "scripts": {
+    "test": "npm run test:main",
+    "test:main": "newman run collection/Elagi-API-Testing.postman_collection.json -e environment/Elagi.postman_environment.json --folder \"Main Flow\" -r cli,htmlextra,junit --reporter-htmlextra-export reports/main-flow-report.html --reporter-htmlextra-title \"Elagi API - Main Flow\" --reporter-junit-export reports/main-flow-junit.xml",
+    "test:all": "newman run collection/Elagi-API-Testing.postman_collection.json -e environment/Elagi.postman_environment.json -r cli,htmlextra,junit --reporter-htmlextra-export reports/full-report.html --reporter-htmlextra-title \"Elagi API - Full Regression\" --reporter-junit-export reports/full-junit.xml"
+  },
+  "author": "Asmaa Ebrahim",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}

@@ -1,0 +1,54 @@
+name: API Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: "Which suite to run"
+        type: choice
+        options:
+          - main-flow
+          - full-regression
+        default: main-flow
+
+jobs:
+  api-tests:
+    name: Newman - ${{ github.event.inputs.suite || 'main-flow' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Newman and the HTML reporter
+        run: npm ci
+
+      - name: Run Main Flow (must pass)
+        if: ${{ github.event.inputs.suite != 'full-regression' }}
+        run: npm run test:main
+
+      # The full suite includes BUG-xx tests that assert the expected behaviour.
+      # They fail until the bugs are fixed, so this step does not fail the build.
+      - name: Run full regression (known bugs expected to fail)
+        if: ${{ github.event.inputs.suite == 'full-regression' }}
+        continue-on-error: true
+        run: npm run test:all
+
+      - name: Upload HTML and JUnit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newman-reports
+          path: reports/
+          retention-days: 30
