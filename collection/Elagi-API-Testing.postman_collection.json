@@ -3,7 +3,7 @@
 		"_postman_id": "b9134701-6199-4ccc-98fb-2e391e159516",
 		"name": "Elagi API Testing",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"description": "API test suite for the Elagi (علاجي) online pharmacy API — https://elagi.semicorner.com/api\n\nMain Flow: 33 chained end-to-end requests (Authentication → Categories → Purchase → Homepage).\nValidation & Negative Scenarios: positive, negative, boundary-value and security checks per feature.\nRequests named BUG-xx assert the EXPECTED behaviour, so they fail until the bug is fixed.\n\nAuthor: Asmaa Ebrahim"
+		"description": "API test suite for the Elagi (علاجي) online healthcare and pharmacy API — https://elagi.semicorner.com/api\n\nMain Flow: 33 chained end-to-end requests (Authentication → Categories → Purchase → Homepage).\nValidation & Negative Scenarios: positive, negative, boundary-value and security checks per feature.\nRequests named BUG-xx assert the EXPECTED behaviour, so they fail until the bug is fixed.\n\nAuthor: Asmaa Ebrahim"
 	},
 	"item": [
 		{

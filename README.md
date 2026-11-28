@@ -6,7 +6,7 @@
 ![JavaScript](https://img.shields.io/badge/Tests-JavaScript%20%2F%20Chai-F7DF1E?logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-End-to-end API test automation for **Elagi (علاجي)**, an online pharmacy web app (Laravel REST API).
+End-to-end API test automation for **Elagi (علاجي)**, an online healthcare and pharmacy web app (Laravel REST API).
 Built with **Postman** and run from the command line and CI with **Newman**.
 
 > Graduation project — Software Testing course, Semi Corner (2026).

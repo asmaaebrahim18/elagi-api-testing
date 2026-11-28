@@ -1,7 +1,7 @@
 {
   "name": "elagi-api-testing",
   "version": "1.0.0",
-  "description": "API test automation for the Elagi (علاجي) online pharmacy — Postman + Newman",
+  "description": "API test automation for the Elagi (علاجي) online healthcare and pharmacy web app — Postman + Newman",
   "private": true,
   "scripts": {
     "test": "npm run test:main",
